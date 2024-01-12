@@ -117,7 +117,7 @@ const faqPages: Record<string, FaqPage> = {
             }
             // More questions for page 5
         ],
-        imgSrc: ""
+        imgSrc: "/home/faq/blank.svg"
     },
     page6: {
         questions: [
@@ -147,7 +147,7 @@ const faqPages: Record<string, FaqPage> = {
             }
             // More questions for hidden page 1
         ],
-        imgSrc: ""
+        imgSrc: "/home/faq/blank.svg"
     },
     page9: {
         questions: [
@@ -157,7 +157,7 @@ const faqPages: Record<string, FaqPage> = {
             }
             // More questions for mobile page 2
         ],
-        imgSrc: ""
+        imgSrc: "/home/faq/blank.svg"
     },
     page10: {
         questions: [
@@ -167,7 +167,7 @@ const faqPages: Record<string, FaqPage> = {
             }
             // More questions for hidden page 2
         ],
-        imgSrc: ""
+        imgSrc: "/home/faq/blank.svg"
     },
     page11: {
         questions: [
@@ -187,7 +187,7 @@ const faqPages: Record<string, FaqPage> = {
             }
             // More questions for hidden page 3
         ],
-        imgSrc: ""
+        imgSrc: "/home/faq/blank.svg"
     },
     // Add more pages as needed
 };
@@ -371,7 +371,7 @@ const FAQ = () => {
             ...faqPages.page3.questions,
             ...faqPages.page4.questions
         ],
-        imgSrc: ""
+        imgSrc: "/home/faq/blank.svg"
     };
 
     faqPages.page11 = {
@@ -391,6 +391,7 @@ const FAQ = () => {
                 <div className={styles.faqLotties}>
                     <div className={lottie}>
                         { <Lottie 
+                            className={styles.lottieSize}
                             animationData={display}
                             loop={false}
                             autoplay={true}
