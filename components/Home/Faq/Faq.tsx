@@ -302,9 +302,10 @@ const FAQ = () => {
         } 
     }
 
-    const changeDisplay = (display: boolean) => {
-        setDisplay(display);
-        toggleVisibility();
+    const changeDisplay = (disp: any) => {
+        setDisplay(display === disp ? display : disp);
+        if (display != disp)
+            toggleVisibility();
     }
 
     useEffect(() => {
