@@ -16,11 +16,11 @@ const JoinUs = () => {
                     <Image src={Shelf} alt="shelf" className={styles.shelf} />
 
                     <div className={styles.socialmediaContainer}>
-                        <Link target="_blank" href="https://twitter.com/HackIllinois">
-                            <Image src={Twitter} alt="twitter" className={styles.twitter} />
-                        </Link>
                         <Link target="_blank" href="https://www.instagram.com/hackillinois">
                             <Image src={Instagram} alt="instagram" className={styles.instagram} />
+                        </Link>
+                        <Link target="_blank" href="https://twitter.com/HackIllinois">
+                            <Image src={Twitter} alt="twitter" className={styles.twitter} />
                         </Link>
                     </div>
                 </div>
