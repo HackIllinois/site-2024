@@ -79,7 +79,7 @@ export default Navbar;
 
 const KnightsButton = () => {
     return (
-        <a>
+        <a href="/knights">
             <button className={styles.knightButton}>
                 <div className={styles.buttonBackground}></div>
                 <div className={styles.buttonContent}>
