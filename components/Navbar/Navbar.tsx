@@ -39,7 +39,7 @@ const Navbar = () => {
 
     return (
         <nav className={styles.navbar}>
-            <Image alt="HackIllinois Logo" src={Logo} />
+            <Image alt="HackIllinois Logo" onClick={() => window.location.pathname = "/"} style={{cursor: 'pointer'}} src={Logo} />
             <div
                 className={styles.mobileMenu}
                 onClick={() => setShowMobileNavbar(p => !p)}
