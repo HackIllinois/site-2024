@@ -28,7 +28,7 @@ const Knights : React.FC = () => {
                     <div className={styles.whatBox}>
                         <h2>What is HackIllinois Knights?</h2>
                         <br></br>
-                        <p>HackIllinois Knights is an exclusive track tailored for prospective attendees to dive into a competitively elevated hackathon atmosphere for an increased prize value.
+                        <p>HackIllinois Knights is an exclusive path tailored for prospective attendees to dive into a competitively elevated hackathon atmosphere for an increased prize value.
                             <br></br>
                             <br></br>
                             It&apos;s a <em>specialized arena for experienced hackers</em> who have mastered the fundamentals and are now looking to test their skills in a more challenging environment. 
@@ -40,19 +40,19 @@ const Knights : React.FC = () => {
                     <div className={styles.benefitBox}>
                         <h2>What are the benefits of being a HackIllinois Knight?</h2>
                         <br></br>
-                        <p>Attendees in this track have the exclusive opportunity to compete for the <em>grand Knights prize of $2,000.</em>
+                        <p>Attendees in this path have the exclusive opportunity to compete for the <em>grand Knights prize of $2,000.</em>
                             <br></br>
                             <br></br>
-                            Additionally, they will gain access to <em>special networking opportunities</em> with our event sponsors – but spots are limited, so register soon!
+                            Additionally, they will gain access to <em>special networking opportunities</em> with our event sponsors and the chance to present their project in a <em>thrilling Shark-Tank inspired showcase</em>, among other exciting perks – but spots are limited, so register soon!”
                         </p>
                     </div>
                     <div className={styles.differBox}>
                         <h2>How is HackIllinois Knights different from standard HackIllinois attendance?</h2>
                         <br></br>
-                        <p>HackIllinois is a historically welcoming space for all skill levels, especially for beginner-level coders. This year, we created <em>HackIllinois Knights to be inclusive of advanced skill levels and provide more opportunities for advanced hackers.</em>
+                        <p>HackIllinois is a historically welcoming space for all skill levels, especially for beginner-level coders. This year, we created <em>HackIllinois Knights to be inclusive of advanced skill levels and create a more engaging environment for seasoned hackers.</em>
                             <br></br>
                             <br></br>
-                            All attendees from both tracks will enjoy access to HackIllinois&apos;s vibrant array of events, workshops, Q&As, and the Company Expo. Each track will maintain the spirit of inclusivity and learning to ensure that all attendees, regardless of their track, experience the full magic of HackIllinois!
+                            All attendees from both paths will enjoy access to HackIllinois&apos;s vibrant array of events, workshops, company Q&As, and the Company Expo. Each path will maintain the spirit of inclusivity and learning to ensure that all attendees, regardless of their track, experience the full magic of HackIllinois!
                             <br></br>
                             <br></br>
                             Additionally, all HackIllinois attendees are eligible to compete in all our sponsored tracks.*
