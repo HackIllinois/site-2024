@@ -3,6 +3,9 @@ import Image from 'next/image'
 import Saber from '@/public/knights/knight-saber.svg'
 import Horse from '@/public/knights/knight-horse.svg'
 import Background from '@/public/knights/background.svg'
+import MobileBG from '@/public/knights/mobile-background.svg'
+import SkyCrack1 from '@/public/knights/skycrack1.svg'
+import SkyCrack2 from '@/public/knights/skycrack2.svg'
 
 const Knights : React.FC = () => {
 
@@ -11,8 +14,11 @@ const Knights : React.FC = () => {
         <div className={styles.background}>
             <div className={styles.images}>
                 <Image src={Background} alt="Background Dots" className={styles.background} />
+                <Image src={MobileBG} alt="Background Dots" className={styles.mobilebg} />
                 <Image src={Saber} alt="Knight Saber Image" className={styles.saber} />
                 <Image src={Horse} alt="Knight Horse Image" className={styles.horse} />
+                <Image src={SkyCrack1} alt="Sky Background" className={styles.sc1} />
+                <Image src={SkyCrack2} alt="Sky Background" className={styles.sc2} />
             </div>
             <div className={styles.text}>
                 <div className={styles.title}>
