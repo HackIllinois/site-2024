@@ -1,14 +1,14 @@
-import styles from './styles.module.scss'
-import Image from 'next/image'
-import Link from 'next/link'
-import Twitter from '@/public/home/joinus/x logo.svg'
-import Instagram from '@/public/home/joinus/instagram.svg'
-import Bricks from '@/public/home/joinus/joinus brick.svg'
+import styles from "./styles.module.scss";
+import Image from "next/image";
+import Link from "next/link";
+import Twitter from "@/public/home/joinus/x logo.svg";
+import Instagram from "@/public/home/joinus/instagram.svg";
+import Bricks from "@/public/home/joinus/joinus brick.svg";
 
-import Shelf from '@/public/home/joinus/joinus shelf.svg'
+import Shelf from "@/public/home/joinus/joinus shelf.svg";
 
 const JoinUs = () => {
-    return ( 
+    return (
         <section className={styles.joinus}>
             <div className={styles.joinusContainer}>
                 <Image src={Bricks} alt="bricks" className={styles.bricks} />
@@ -29,10 +29,9 @@ const JoinUs = () => {
                     Follow us on Instagram (@<a target="_blank" href="https://www.instagram.com/hackillinois">HackIllinois</a>) 
                     and Twitter (@<a target="_blank" href="https://www.twitter.com/hackillinois">HackIllinois</a>) to be notified of our event updates! There will be regular content and posts.
                 </div>
-
             </div>
         </section>
     );
-}
+};
 
 export default JoinUs;

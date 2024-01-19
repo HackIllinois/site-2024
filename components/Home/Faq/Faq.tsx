@@ -1,14 +1,26 @@
-"use client"
-import styles from './styles.module.scss'
+"use client";
+import styles from "./styles.module.scss";
+import { useState, useEffect } from "react";
+import Lottie from "lottie-react";
+import FAQHeader from "@/public/home/faq/faq header.svg";
+import Image from "next/image";
 
-import FAQHeader from '@/public/home/faq/faq header.svg'
-import Image from 'next/image'
-
-import { BefDur, BefGen, DurGen, DurBef, GenBef, GenDur } from '@/public/home/faq/faq-lotties-spellbook/index'
-import { BefDur2, BefGen2, DurGen2, DurBef2, GenBef2, GenDur2 } from '@/public/home/faq/faq-lotties-scroll/index'
-
-import { useState, useEffect } from 'react';
-import Lottie from 'lottie-react';
+import {
+    BefDur,
+    BefGen,
+    DurGen,
+    DurBef,
+    GenBef,
+    GenDur
+} from "@/public/home/faq/faq-lotties-spellbook/index";
+import {
+    BefDur2,
+    BefGen2,
+    DurGen2,
+    DurBef2,
+    GenBef2,
+    GenDur2
+} from "@/public/home/faq/faq-lotties-scroll/index";
 
 type FaqItem = {
     question: string;
@@ -196,7 +208,6 @@ const faqPages: Record<string, FaqPage> = {
 const FAQ = () => {
     const [pageNum, setPageNum] = useState(1);
     const isMobile = () => {
-
         if (typeof window !== "undefined") {
             return window.innerWidth <= 900;
         }
@@ -208,14 +219,14 @@ const FAQ = () => {
 
     const handleResize = () => {
         const newMobile = isMobile();
-    
+
         const newUsebd = newMobile ? BefDur2 : BefDur;
         const newUsebg = newMobile ? BefGen2 : BefGen;
         const newUsedg = newMobile ? DurGen2 : DurGen;
         const newUsedb = newMobile ? DurBef2 : DurBef;
         const newUsegb = newMobile ? GenBef2 : GenBef;
         const newUsegd = newMobile ? GenDur2 : GenDur;
-    
+
         setMobile(newMobile);
         setUsebd(newUsebd);
         setUsebg(newUsebg);
@@ -223,7 +234,7 @@ const FAQ = () => {
         setUsedb(newUsedb);
         setUsegb(newUsegb);
         setUsegd(newUsegd);
-    
+
         if (display === usegb) {
             console.log("before")
             changeDisplay(newUsegb);
@@ -258,7 +269,7 @@ const FAQ = () => {
     const [usedb, setUsedb] = useState(mobile ? DurBef2 : DurBef);
     const [usegb, setUsegb] = useState(mobile ? GenBef2 : GenBef);
     const [usegd, setUsegd] = useState(mobile ? GenDur2 : GenDur);
-    
+
     const [display, setDisplay] = useState(usedg);
 
     const handleClick = (id: number) => {
@@ -299,8 +310,8 @@ const FAQ = () => {
             } else if (id == 2) {
                 changeDisplay(usebd);
             }
-        } 
-    }
+        }
+    };
 
     const changeDisplay = (disp: any) => {
         setDisplay(display === disp ? display : disp);
@@ -315,46 +326,49 @@ const FAQ = () => {
         const during = document.getElementById("during");
 
         const genheading = document.querySelectorAll('[aria-label="GENERAL"]');
-        const beforeheading = document.querySelectorAll('[aria-label="BEFORE"]');
-        const duringheading = document.querySelectorAll('[aria-label="DURING"]');
+        const beforeheading = document.querySelectorAll(
+            '[aria-label="BEFORE"]'
+        );
+        const duringheading = document.querySelectorAll(
+            '[aria-label="DURING"]'
+        );
 
         const handleGeneralClick = () => handleClick(0);
         const handleBeforeClick = () => handleClick(1);
         const handleDuringClick = () => handleClick(2);
 
-        genheading.forEach((heading) => {
-            heading.addEventListener('click', handleGeneralClick);
+        genheading.forEach(heading => {
+            heading.addEventListener("click", handleGeneralClick);
         });
-        beforeheading.forEach((heading) => {
-            heading.addEventListener('click', handleBeforeClick);
+        beforeheading.forEach(heading => {
+            heading.addEventListener("click", handleBeforeClick);
         });
-        duringheading.forEach((heading) => {
-            heading.addEventListener('click', handleDuringClick);
+        duringheading.forEach(heading => {
+            heading.addEventListener("click", handleDuringClick);
         });
 
-        general?.addEventListener('click', handleGeneralClick);
-        before?.addEventListener('click', handleBeforeClick);
-        during?.addEventListener('click', handleDuringClick);
+        general?.addEventListener("click", handleGeneralClick);
+        before?.addEventListener("click", handleBeforeClick);
+        during?.addEventListener("click", handleDuringClick);
 
-        window.addEventListener('resize', handleResize);
-        
+        window.addEventListener("resize", handleResize);
+
         return () => {
-            general?.removeEventListener('click', handleGeneralClick);
-            before?.removeEventListener('click', handleBeforeClick);
-            during?.removeEventListener('click', handleDuringClick);
-            genheading.forEach((heading) => {
-                heading.removeEventListener('click', handleGeneralClick);
+            general?.removeEventListener("click", handleGeneralClick);
+            before?.removeEventListener("click", handleBeforeClick);
+            during?.removeEventListener("click", handleDuringClick);
+            genheading.forEach(heading => {
+                heading.removeEventListener("click", handleGeneralClick);
             });
-            beforeheading.forEach((heading) => {
-                heading.removeEventListener('click', handleBeforeClick);
+            beforeheading.forEach(heading => {
+                heading.removeEventListener("click", handleBeforeClick);
             });
-            duringheading.forEach((heading) => {
-                heading.removeEventListener('click', handleDuringClick);
+            duringheading.forEach(heading => {
+                heading.removeEventListener("click", handleDuringClick);
             });
-            
-            window.removeEventListener('resize', handleResize);
-        }
 
+            window.removeEventListener("resize", handleResize);
+        };
     }, [display, mobile]);
 
 
@@ -385,7 +399,11 @@ const FAQ = () => {
         <section className={styles.faq}>
             <div className={styles.faqContainer}>
                 <div className={styles.faqItemContainer1}>
-                    <Image src={FAQHeader} alt="FAQ Header" className={styles.faqHeader} />
+                    <Image
+                        src={FAQHeader}
+                        alt="FAQ Header"
+                        className={styles.faqHeader}
+                    />
                 </div>
 
                 <div className={styles.faqLotties}>
@@ -417,10 +435,9 @@ const FAQ = () => {
                         </div>
                     </div>
                 </div>
-                
             </div>
         </section>
     );
-}
+};
 
 export default FAQ;
