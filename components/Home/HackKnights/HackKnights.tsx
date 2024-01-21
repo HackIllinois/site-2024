@@ -38,8 +38,17 @@ const HackKnights: React.FC = () => {
                             Hack
                             <span style={{ color: "#FFB23E" }}>Knights</span>
                         </h3>
-                        <button className={styles.hkButton} onClick={() => window.location.pathname = "/knights"}>
-                            <Image className={styles.hkLearnMoreButton} alt="learn more button" src={LearnMoreButton} />
+                        <button
+                            className={styles.hkButton}
+                            onClick={() =>
+                                (window.location.pathname = "/knights")
+                            }
+                        >
+                            <Image
+                                className={styles.hkLearnMoreButton}
+                                alt="learn more button"
+                                src={LearnMoreButton}
+                            />
                         </button>
                     </div>
                 </div>

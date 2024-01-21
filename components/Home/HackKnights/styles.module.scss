@@ -1,5 +1,6 @@
 @keyframes moveUpDown {
-    0%, 100% {
+    0%,
+    100% {
         transform: translateY(-6px);
         // filter: brightness(100%);
     }
@@ -8,7 +9,6 @@
         // filter: brightness(120%); /* Adjust value to control brightness */
     }
 }
-
 
 .hackknights {
     .hackknightsContainer {
@@ -64,7 +64,6 @@
                 margin-top: 1vh;
                 display: inline;
                 overflow: hidden;
-                
 
                 &:hover {
                     // filter: brightness(0.9);
@@ -84,13 +83,12 @@
                 background: rgba(255, 255, 255, 0.3);
                 transform: skewX(336deg);
                 transition: 0.3s;
-              }
+            }
 
             .hkButton:hover:before {
                 opacity: 1;
                 left: 62%;
                 background: rgba(255, 255, 255, 0.5);
-                    
             }
 
             .hkLearnMoreButton {
