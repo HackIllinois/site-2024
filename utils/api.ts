@@ -88,6 +88,7 @@ export function authenticate(to: string): void {
             "token",
             process.env.NEXT_PUBLIC_REACT_APP_TOKEN
         );
+
     } else {
         localStorage.setItem("to", to);
         to = `${APIv2}/auth/login/github/?device=web`;
