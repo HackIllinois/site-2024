@@ -164,8 +164,8 @@ const convertFromAPI = (registration: RegistrationType): RegistrationSchema => {
 };
 
 const Form = ({ formIndex, setFormIndex }: FormProps): JSX.Element => {
-    const [isLoading, setIsLoading] = useState(true); // TODO: change this back to true
-    const [isKnight, setIsKnight] = useState(false);
+    const [isLoading, setIsLoading] = useState(true); 
+    const [isKnight, setIsKnight] = useState(false); 
 
     const methods = useForm<RegistrationSchema>({
         resolver: zodResolver(registrationSchema, { errorMap }),
