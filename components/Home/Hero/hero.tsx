@@ -1,6 +1,3 @@
-"use client";
-import React, { useState } from "react";
-
 import styles from "./styles.module.scss";
 
 import Image from "next/image";
@@ -9,15 +6,7 @@ import Village from "@/public/home/hero/village.svg";
 import { button_text } from "@/modules/HeroData";
 
 const Hero: React.FC = () => {
-    const [clickCount, setClickCount] = useState(0);
 
-    const handleClick = () => {
-        setClickCount(clickCount + 1);
-        if (clickCount + 1 === 10) {
-            window.location.href =
-                "https://www.youtube.com/watch?v=dQw4w9WgXcQ"; // Replace with your external link
-        }
-    };
     return (
         <section className={styles.heroMain}>
             <div className={styles.heroContainer}>
@@ -29,7 +18,7 @@ const Hero: React.FC = () => {
                     />
                 </div>
                 <div className={styles.heroButtonWrapper}>
-                    <button className={styles.heroButton} onClick={handleClick}>
+                    <button className={styles.heroButton} onClick={() => window.location.pathname = "/register"}>
                         {button_text}
                     </button>
                 </div>
