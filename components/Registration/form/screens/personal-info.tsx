@@ -50,7 +50,7 @@ const PersonalInfo = () => {
         },
         {
             label: "Arab or Middle Eastern",
-            value: "Middle Eastern or North African",
+            value: "Arab or Middle Eastern",
         },
         {
             label: "Black or African American",
