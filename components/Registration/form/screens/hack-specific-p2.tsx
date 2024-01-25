@@ -25,7 +25,7 @@ const interestOptions = [
     },
     {
         label: "Mini-events (e.g. games, socials)",
-        value: "Participating in mini-events (e.g. games, socials)"
+        value: "Participating in mini-events"
     },
     { label: "Meeting new people", value: "Meeting new people" },
     {
@@ -34,7 +34,7 @@ const interestOptions = [
     },
     {
         label: "Company Q&As & Networking events",
-        value: "Company Q&As and Networking events"
+        value: "Company Q&As and networking events"
     },
 
     { label: "Other", value: "Other", isOther: true }
