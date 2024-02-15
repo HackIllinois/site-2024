@@ -183,7 +183,7 @@ export const OkButton = (
 
 export const DiscordIcon = (props: SVGProps<SVGSVGElement>) => {
     return (
-        <a href="https://discord.gg/sy5ga67Wqm" target="_blank" rel="noreferrer noopener">
+        <a href="https://discord.gg/MgjgSnfQ8m" target="_blank" rel="noreferrer noopener">
             <svg
                 width="133"
                 height="67"
