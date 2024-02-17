@@ -62,11 +62,6 @@ const Profile: React.FC = () => {
 
 
 
-
-
-
-
-
 const Some: React.FC = () => {
     const { isModalOpen, closeModal, openModal } = useModal();
     const {
