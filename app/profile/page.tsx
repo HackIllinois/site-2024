@@ -12,6 +12,7 @@ import { Bookshelf } from "@/components/Profile/Bookshelf";
 import { ModalOverlay, useModal } from "@/components/Profile/modal";
 import { useEffect, useState, useCallback } from "react";
 import { useRouter } from "next/navigation";
+
 import {
     authenticate,
     getProfile,
@@ -43,6 +44,28 @@ import {
 } from "@/components/Profile/modal-views";
 import { RSVPSteps } from "@/components/Profile/modal-views/rsvp-steps";
 import { avatars } from "@/components/Profile/avatars";
+
+
+const Profile: React.FC = () => {
+    useEffect(() => {
+        if (!isAuthenticated()) {
+            authenticate(window.location.href);
+        }
+    });
+
+    if (isAuthenticated()) {
+        return <Some />;
+    } else {
+        return <h1>Loading ...</h1>
+    }
+};
+
+
+
+
+
+
+
 
 const Some: React.FC = () => {
     const { isModalOpen, closeModal, openModal } = useModal();
@@ -101,25 +124,20 @@ const Some: React.FC = () => {
         setProfileState(profile_response);
         setLoading(false);
     }
-
+    
     useEffect(() => {
-        if (!isAuthenticated()) {
-            authenticate(window.location.href);
-        }
-
         setLoading(true);
-
+        
         isRegistered()
             .then(isRegistered => {
                 if (!isRegistered) {
                     alert("This github account is not associated with any registration.");
-                    window.location.pathname = "/";
-                    return;
+                    window.location.pathname = "/";     
                 }
             })
             .then(() => getProfile())
-            .then((p) => {
-                setProfileState(p)
+            .then(p => {
+                setProfileState(p);
                 getUser().then(user => {
                     setUser(user);
                 });
@@ -281,4 +299,4 @@ const Some: React.FC = () => {
     );
 };
 
-export default Some;
+export default Profile;
