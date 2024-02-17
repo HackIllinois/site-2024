@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import styles from "./page.module.scss";
 import Image from "next/image";
@@ -47,13 +47,16 @@ import { avatars } from "@/components/Profile/avatars";
 
 
 const Profile: React.FC = () => {
+    const [auth, setAuth] = useState<boolean>(false);
     useEffect(() => {
         if (!isAuthenticated()) {
             authenticate(window.location.href);
+        } else {
+            setAuth(true);
         }
-    });
+    }, []);
 
-    if (isAuthenticated()) {
+    if (auth) {
         return <Some />;
     } else {
         return <h1>Loading ...</h1>
