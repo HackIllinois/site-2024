@@ -31,6 +31,11 @@ const DEFAULT_NAVBAR_ITEMS: NavbarItem[] = [
     //     link: "#"
     // },
     {
+        title: "Travel",
+        link: "/travel",
+        active: false
+    },
+    {
         title: "Mentors",
         link: "/mentors",
         active: false
@@ -41,11 +46,6 @@ const DEFAULT_NAVBAR_ITEMS: NavbarItem[] = [
         link: "/profile",
         active: false
     },
-    {
-        title: "Travel",
-        link: "/travel",
-        active: false
-    }
     // {
     //     title: "Register",
     //     link: "/register",
