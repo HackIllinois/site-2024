@@ -41,11 +41,11 @@ const DEFAULT_NAVBAR_ITEMS: NavbarItem[] = [
         active: false
     },
 
-    {
-        title: "Profile",
-        link: "/profile",
-        active: false
-    },
+    // {
+    //     title: "Profile",
+    //     link: "/profile",
+    //     active: false
+    // },
     // {
     //     title: "Register",
     //     link: "/register",

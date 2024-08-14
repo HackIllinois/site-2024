@@ -3,6 +3,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import styles from './styles.module.scss';
 import Image from 'next/image';
+import { events } from '@/modules/EventsData';
 import { getEvents } from '@/utils/api';
 import { EventType } from '@/utils/types';
 
@@ -27,16 +28,6 @@ import SatPot from '@/public/schedule/potions/SatPot.svg';
 import SunPot from '@/public/schedule/potions/SunPot.svg';
 
 const Schedule: React.FC = () => {
-    const [events, setEvents] = useState<EventType[]>([]);
-    const [isLoading, setIsLoading] = useState(true);
-    
-    useEffect(() => {
-        getEvents().then((data) => {
-            setEvents(data);
-            setIsLoading(false);
-        });
-    }, [isLoading]);
-
     const fridayEvents = events.filter(event => (
         Date.parse("February 23, 2024") <= event.startTime * 1000 && event.startTime * 1000 < Date.parse("February 24, 2024")
     )).sort((a, b) => (
